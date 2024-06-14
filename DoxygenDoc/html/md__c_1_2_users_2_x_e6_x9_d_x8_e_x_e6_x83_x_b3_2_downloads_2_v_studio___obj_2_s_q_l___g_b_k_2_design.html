@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SQL_Project: MarkDown File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SQL_Project<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">employee database</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div><div class="header">
+  <div class="headertitle"><div class="title">MarkDown File</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+数据库关系模式设计</h2>
+<p><b>1.初始的关系模式 <em>R1 员工(Employee)</em> ( &emsp; 员工编号(emp_id), &emsp; 姓名(name), &emsp; 性别(sex), &emsp; 年龄(age), &emsp; 科室(department), &emsp; 职位(position) )</b></p>
+<p><b><em>R2 工资(Salary)</em> ( &emsp; 工资编号(salary_id), &emsp; 员工编号(emp_id), &emsp; 基本工资(basic_salary), &emsp; 福利补贴(welfare_salary), &emsp; 奖励工资(reward_salary), &emsp; 扣除奖金(unemp_insurance), &emsp; 实发工资(actual_salary), &emsp; 发放日期(pay_date) ) <em>2.第三范式(3NF)优化</em> <em>R1 Employee</em> &emsp; emp_id (Prime Key) &emsp; name &emsp; sex &emsp; age &emsp; position (Foreign Key reference by R3 PK) &emsp; department (Foreign Key reference by R4 PK) &emsp; basic_salary &emsp; weflare_subsidy &emsp; reward_salary &emsp; unemp_insurance &emsp; housing_fund</b></p>
+<p><b><em>R2 SalaryRecord</em> &emsp; sal_id (Prime Key) -&gt; auto increase id &emsp; emp_id (Prime Key) &emsp; actual_salary (rely to R1 attribute) &emsp; pay_date</b></p>
+<p><b><em>R3 Position_Tab</em> &emsp; pos_name (Prime Key) -&gt; append concept to R1 (pos_name)</b></p>
+<p><b><em>R4 Department_Tab</em> &emsp; dep_name (Prime Key) -&gt; append concept to R1 (department)</b></p>
+<p><b><em>R5 User</em> &emsp; user_name (Prime Key) &emsp; password </b></p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

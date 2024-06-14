@@ -1,0 +1,43 @@
+\doxysection{C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\+Login.cpp 文件参考}
+\hypertarget{_login_8cpp}{}\label{_login_8cpp}\index{C:/Users/李想/Downloads/VStudio\_Obj/SQL\_GBK/Login.cpp@{C:/Users/李想/Downloads/VStudio\_Obj/SQL\_GBK/Login.cpp}}
+
+
+change std\+::regex to boost\+::regex , because of the std\+::regex efficiency questions  
+
+
+{\ttfamily \#include "{}Login.\+hpp"{}}\newline
+{\ttfamily \#include $<$boost/regex.\+hpp$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$sql.\+h$>$}\newline
+{\ttfamily \#include $<$sqlext.\+h$>$}\newline
+{\ttfamily \#include $<$sqltypes.\+h$>$}\newline
+{\ttfamily import $<$print$>$;}\newline
+{\ttfamily import $<$iostream$>$;}\newline
+{\ttfamily import $<$regex$>$;}\newline
+{\ttfamily import $<$iomanip$>$;}\newline
+\doxysubsubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_login_8cpp_a190da7c4fd0370d80aad6ed261b904d4}\label{_login_8cpp_a190da7c4fd0370d80aad6ed261b904d4} 
+SQLRETURN {\bfseries SQL\+::ret} = NULL
+\item 
+\Hypertarget{_login_8cpp_a75ad2370998d1548cb69d81137c6439b}\label{_login_8cpp_a75ad2370998d1548cb69d81137c6439b} 
+SQLHENV {\bfseries SQL\+::henv} = NULL
+\item 
+\Hypertarget{_login_8cpp_a19a26e1dea1dec50d8bf12e1f886fe73}\label{_login_8cpp_a19a26e1dea1dec50d8bf12e1f886fe73} 
+SQLHDBC {\bfseries SQL\+::hdbc} = NULL
+\item 
+\Hypertarget{_login_8cpp_a27532cbee3dd4e5122685e603b847d05}\label{_login_8cpp_a27532cbee3dd4e5122685e603b847d05} 
+SQLHSTMT {\bfseries SQL\+::hstmt} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+change std\+::regex to boost\+::regex , because of the std\+::regex efficiency questions 
+
+\begin{DoxyAuthor}{作者}
+Li Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+June 10 2024 
+\end{DoxyDate}

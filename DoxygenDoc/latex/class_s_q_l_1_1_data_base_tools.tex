@@ -1,0 +1,91 @@
+\doxysection{SQL\+::Data\+Base\+Tools类 参考}
+\hypertarget{class_s_q_l_1_1_data_base_tools}{}\label{class_s_q_l_1_1_data_base_tools}\index{SQL::DataBaseTools@{SQL::DataBaseTools}}
+
+
+class \doxylink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools} append some functions to deal with SQL sentences.  
+
+
+
+
+{\ttfamily \#include $<$sql\+\_\+\+Tools.\+hpp$>$}
+
+类 SQL\+::Data\+Base\+Tools 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_l_1_1_data_base_tools}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_a1a3b81b1764d696bb535f63b2256851a}\label{class_s_q_l_1_1_data_base_tools_a1a3b81b1764d696bb535f63b2256851a} 
+{\bfseries Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} get resources. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_ab9e828699b775581e5687551491f5210}\label{class_s_q_l_1_1_data_base_tools_ab9e828699b775581e5687551491f5210} 
+void {\bfseries select\+Employee} ()
+\begin{DoxyCompactList}\small\item\em select and show table employee\textquotesingle{}s message. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_a6348fba624e58194328ad9955e6bbca7}\label{class_s_q_l_1_1_data_base_tools_a6348fba624e58194328ad9955e6bbca7} 
+void {\bfseries select\+Salary\+Record} ()
+\begin{DoxyCompactList}\small\item\em select and show table salary\+\_\+record\textquotesingle{}s message. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_a5c69b10c9bf24657fecfa090dae26c7e}\label{class_s_q_l_1_1_data_base_tools_a5c69b10c9bf24657fecfa090dae26c7e} 
+{\bfseries Data\+Base\+Tools} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_a8e8a8d97d279c6ac91b86548ecc874b0}\label{class_s_q_l_1_1_data_base_tools_a8e8a8d97d279c6ac91b86548ecc874b0} 
+\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} {\bfseries operator=} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_ad23be8f45212044d349a1601604e3f44}\label{class_s_q_l_1_1_data_base_tools_ad23be8f45212044d349a1601604e3f44} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} free handles. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_aadf76bf6c4fa0ad675ce5d832434bd97}\label{class_s_q_l_1_1_data_base_tools_aadf76bf6c4fa0ad675ce5d832434bd97} 
+void {\bfseries update\+Actual\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function of this function is similar to a trigger that update Actual\+\_\+\+Sarlary. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_data_base_tools_acfe1e03a0bf85b99a02fbc830e77349e}\label{class_s_q_l_1_1_data_base_tools_acfe1e03a0bf85b99a02fbc830e77349e} 
+void {\bfseries clear\+Error\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function can clear the actual\+\_\+salary that should not be exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静态 Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a11a4ce797bdead31eca8d9d0c1e8c920}{connect\+Data\+Base}} ()
+\begin{DoxyCompactList}\small\item\em the function is connect My\+SQL Data\+Base and it\textquotesingle{}s a static function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ac537eeebe5525302426f337f6f7ef123}{use\+Data\+Base}} (const std\+::string \&db\+\_\+name)
+\begin{DoxyCompactList}\small\item\em choose database to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+class \doxylink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools} append some functions to deal with SQL sentences. 
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_s_q_l_1_1_data_base_tools_a11a4ce797bdead31eca8d9d0c1e8c920}\label{class_s_q_l_1_1_data_base_tools_a11a4ce797bdead31eca8d9d0c1e8c920} 
+\index{SQL::DataBaseTools@{SQL::DataBaseTools}!connectDataBase@{connectDataBase}}
+\index{connectDataBase@{connectDataBase}!SQL::DataBaseTools@{SQL::DataBaseTools}}
+\doxysubsubsection{\texorpdfstring{connectDataBase()}{connectDataBase()}}
+{\footnotesize\ttfamily bool SQL\+::\+Data\+Base\+Tools\+::connect\+Data\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+the function is connect My\+SQL Data\+Base and it\textquotesingle{}s a static function. 
+
+\begin{DoxyReturn}{返回}
+boolean 
+\end{DoxyReturn}
+\Hypertarget{class_s_q_l_1_1_data_base_tools_ac537eeebe5525302426f337f6f7ef123}\label{class_s_q_l_1_1_data_base_tools_ac537eeebe5525302426f337f6f7ef123} 
+\index{SQL::DataBaseTools@{SQL::DataBaseTools}!useDataBase@{useDataBase}}
+\index{useDataBase@{useDataBase}!SQL::DataBaseTools@{SQL::DataBaseTools}}
+\doxysubsubsection{\texorpdfstring{useDataBase()}{useDataBase()}}
+{\footnotesize\ttfamily void SQL\+::\+Data\+Base\+Tools\+::use\+Data\+Base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+choose database to use. 
+
+
+\begin{DoxyParams}{参数}
+{\em db\+\_\+name} & -\/\texorpdfstring{$>$}{>} string \\
+\hline
+\end{DoxyParams}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{sql___tools_8hpp}{sql\+\_\+\+Tools.\+hpp}}\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{sql___tools_8cpp}{sql\+\_\+\+Tools.\+cpp}}\end{DoxyCompactItemize}

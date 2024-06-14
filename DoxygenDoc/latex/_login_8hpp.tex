@@ -1,0 +1,29 @@
+\doxysection{C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\+Login.hpp 文件参考}
+\hypertarget{_login_8hpp}{}\label{_login_8hpp}\index{C:/Users/李想/Downloads/VStudio\_Obj/SQL\_GBK/Login.hpp@{C:/Users/李想/Downloads/VStudio\_Obj/SQL\_GBK/Login.hpp}}
+
+
+For two user classes, I fill \doxylink{sql___tools_8cpp}{sql\+\_\+\+Tools.\+cpp} API whth twice of them. Specially, Root\+User need more permissions than Rehular\+User. For class Login , I design a static function to check login status.  
+
+
+{\ttfamily \#include "{}sql\+\_\+\+Tools.\+hpp"{}}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+\doxysubsubsection*{类}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_q_l_1_1_login}{SQL\+::\+Login}}
+\begin{DoxyCompactList}\small\item\em class \doxylink{class_s_q_l_1_1_login}{Login} offer a static function to choose user . \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_s_q_l_1_1_root_user}{SQL\+::\+Root\+User}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_s_q_l_1_1_root_user}{Root\+User} has the permissions of delete records \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_s_q_l_1_1_regular_user}{SQL\+::\+Regular\+User}}
+\begin{DoxyCompactList}\small\item\em Regular\textquotesingle{}s delete permissions are limited. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+For two user classes, I fill \doxylink{sql___tools_8cpp}{sql\+\_\+\+Tools.\+cpp} API whth twice of them. Specially, Root\+User need more permissions than Rehular\+User. For class Login , I design a static function to check login status. 
+
+Add new concept (Foreign Key) for table employee (department\+\_\+tab, position\+\_\+tab). Add two public function \textquotesingle{}add\+User\textquotesingle{} \textquotesingle{}delete\+User\textquotesingle{} in class Root\+User. Add new interface {\ttfamily Count} to class Root\+User. \begin{DoxyAuthor}{作者}
+Li Xiang 
+\end{DoxyAuthor}
+\begin{DoxyDate}{日期}
+June 4 2024 
+\end{DoxyDate}

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SQL_Project: SQL::DataBaseTools类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SQL_Project<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">employee database</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>SQL</b></li><li class="navelem"><a class="el" href="class_s_q_l_1_1_data_base_tools.html">DataBaseTools</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="class_s_q_l_1_1_data_base_tools-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">SQL::DataBaseTools类 参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>class <a class="el" href="class_s_q_l_1_1_data_base_tools.html" title="class DataBaseTools append some functions to deal with SQL sentences.">DataBaseTools</a> append some functions to deal with SQL sentences.  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="sql___tools_8hpp_source.html">sql_Tools.hpp</a>&gt;</code></p>
+<div class="dynheader">
+类 SQL::DataBaseTools 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_s_q_l_1_1_data_base_tools.png" usemap="#SQL::DataBaseTools_map" alt=""/>
+  <map id="SQL::DataBaseTools_map" name="SQL::DataBaseTools_map">
+<area href="class_s_q_l_1_1_regular_user.html" title="Regular&#39;s delete permissions are limited." alt="SQL::RegularUser" shape="rect" coords="0,56,127,80"/>
+<area href="class_s_q_l_1_1_root_user.html" title="RootUser has the permissions of delete records" alt="SQL::RootUser" shape="rect" coords="137,56,264,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a1a3b81b1764d696bb535f63b2256851a" id="r_a1a3b81b1764d696bb535f63b2256851a"><td class="memItemLeft" align="right" valign="top"><a id="a1a3b81b1764d696bb535f63b2256851a" name="a1a3b81b1764d696bb535f63b2256851a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DataBaseTools</b> ()</td></tr>
+<tr class="memdesc:a1a3b81b1764d696bb535f63b2256851a"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII -&gt; get resources. <br /></td></tr>
+<tr class="separator:a1a3b81b1764d696bb535f63b2256851a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e828699b775581e5687551491f5210" id="r_ab9e828699b775581e5687551491f5210"><td class="memItemLeft" align="right" valign="top"><a id="ab9e828699b775581e5687551491f5210" name="ab9e828699b775581e5687551491f5210"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>selectEmployee</b> ()</td></tr>
+<tr class="memdesc:ab9e828699b775581e5687551491f5210"><td class="mdescLeft">&#160;</td><td class="mdescRight">select and show table employee's message. <br /></td></tr>
+<tr class="separator:ab9e828699b775581e5687551491f5210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6348fba624e58194328ad9955e6bbca7" id="r_a6348fba624e58194328ad9955e6bbca7"><td class="memItemLeft" align="right" valign="top"><a id="a6348fba624e58194328ad9955e6bbca7" name="a6348fba624e58194328ad9955e6bbca7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>selectSalaryRecord</b> ()</td></tr>
+<tr class="memdesc:a6348fba624e58194328ad9955e6bbca7"><td class="mdescLeft">&#160;</td><td class="mdescRight">select and show table salary_record's message. <br /></td></tr>
+<tr class="separator:a6348fba624e58194328ad9955e6bbca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c69b10c9bf24657fecfa090dae26c7e" id="r_a5c69b10c9bf24657fecfa090dae26c7e"><td class="memItemLeft" align="right" valign="top"><a id="a5c69b10c9bf24657fecfa090dae26c7e" name="a5c69b10c9bf24657fecfa090dae26c7e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>DataBaseTools</b> (<a class="el" href="class_s_q_l_1_1_data_base_tools.html">DataBaseTools</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a5c69b10c9bf24657fecfa090dae26c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e8a8d97d279c6ac91b86548ecc874b0" id="r_a8e8a8d97d279c6ac91b86548ecc874b0"><td class="memItemLeft" align="right" valign="top"><a id="a8e8a8d97d279c6ac91b86548ecc874b0" name="a8e8a8d97d279c6ac91b86548ecc874b0"></a>
+<a class="el" href="class_s_q_l_1_1_data_base_tools.html">DataBaseTools</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_s_q_l_1_1_data_base_tools.html">DataBaseTools</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:a8e8a8d97d279c6ac91b86548ecc874b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad23be8f45212044d349a1601604e3f44" id="r_ad23be8f45212044d349a1601604e3f44"><td class="memItemLeft" align="right" valign="top"><a id="ad23be8f45212044d349a1601604e3f44" name="ad23be8f45212044d349a1601604e3f44"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~DataBaseTools</b> ()</td></tr>
+<tr class="memdesc:ad23be8f45212044d349a1601604e3f44"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII -&gt; free handles. <br /></td></tr>
+<tr class="separator:ad23be8f45212044d349a1601604e3f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf76bf6c4fa0ad675ce5d832434bd97" id="r_aadf76bf6c4fa0ad675ce5d832434bd97"><td class="memItemLeft" align="right" valign="top"><a id="aadf76bf6c4fa0ad675ce5d832434bd97" name="aadf76bf6c4fa0ad675ce5d832434bd97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateActualSalary</b> ()</td></tr>
+<tr class="memdesc:aadf76bf6c4fa0ad675ce5d832434bd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function of this function is similar to a trigger that update Actual_Sarlary. <br /></td></tr>
+<tr class="separator:aadf76bf6c4fa0ad675ce5d832434bd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfe1e03a0bf85b99a02fbc830e77349e" id="r_acfe1e03a0bf85b99a02fbc830e77349e"><td class="memItemLeft" align="right" valign="top"><a id="acfe1e03a0bf85b99a02fbc830e77349e" name="acfe1e03a0bf85b99a02fbc830e77349e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clearErrorSalary</b> ()</td></tr>
+<tr class="memdesc:acfe1e03a0bf85b99a02fbc830e77349e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function can clear the actual_salary that should not be exist. <br /></td></tr>
+<tr class="separator:acfe1e03a0bf85b99a02fbc830e77349e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a11a4ce797bdead31eca8d9d0c1e8c920" id="r_a11a4ce797bdead31eca8d9d0c1e8c920"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a4ce797bdead31eca8d9d0c1e8c920">connectDataBase</a> ()</td></tr>
+<tr class="memdesc:a11a4ce797bdead31eca8d9d0c1e8c920"><td class="mdescLeft">&#160;</td><td class="mdescRight">the function is connect MySQL DataBase and it's a static function.  <br /></td></tr>
+<tr class="separator:a11a4ce797bdead31eca8d9d0c1e8c920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac537eeebe5525302426f337f6f7ef123" id="r_ac537eeebe5525302426f337f6f7ef123"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac537eeebe5525302426f337f6f7ef123">useDataBase</a> (const std::string &amp;db_name)</td></tr>
+<tr class="memdesc:ac537eeebe5525302426f337f6f7ef123"><td class="mdescLeft">&#160;</td><td class="mdescRight">choose database to use.  <br /></td></tr>
+<tr class="separator:ac537eeebe5525302426f337f6f7ef123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>class <a class="el" href="class_s_q_l_1_1_data_base_tools.html" title="class DataBaseTools append some functions to deal with SQL sentences.">DataBaseTools</a> append some functions to deal with SQL sentences. </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a11a4ce797bdead31eca8d9d0c1e8c920" name="a11a4ce797bdead31eca8d9d0c1e8c920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a4ce797bdead31eca8d9d0c1e8c920">&#9670;&#160;</a></span>connectDataBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SQL::DataBaseTools::connectDataBase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the function is connect MySQL DataBase and it's a static function. </p>
+<dl class="section return"><dt>返回</dt><dd>boolean </dd></dl>
+
+</div>
+</div>
+<a id="ac537eeebe5525302426f337f6f7ef123" name="ac537eeebe5525302426f337f6f7ef123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac537eeebe5525302426f337f6f7ef123">&#9670;&#160;</a></span>useDataBase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SQL::DataBaseTools::useDataBase </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>db_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>choose database to use. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">db_name</td><td>-&gt; string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>C:/Users/李想/Downloads/VStudio_Obj/SQL_GBK/<a class="el" href="sql___tools_8hpp_source.html">sql_Tools.hpp</a></li>
+<li>C:/Users/李想/Downloads/VStudio_Obj/SQL_GBK/<a class="el" href="sql___tools_8cpp.html">sql_Tools.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

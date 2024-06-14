@@ -1,0 +1,59 @@
+\doxysection{SQL\+::Regular\+User类 参考}
+\hypertarget{class_s_q_l_1_1_regular_user}{}\label{class_s_q_l_1_1_regular_user}\index{SQL::RegularUser@{SQL::RegularUser}}
+
+
+Regular\textquotesingle{}s delete permissions are limited.  
+
+
+
+
+{\ttfamily \#include $<$Login.\+hpp$>$}
+
+类 SQL\+::Regular\+User 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_l_1_1_regular_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_q_l_1_1_regular_user_a331360eafabfcfe890cb1152b0dd6fd0}\label{class_s_q_l_1_1_regular_user_a331360eafabfcfe890cb1152b0dd6fd0} 
+void {\bfseries menu\+Option} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} get resources. \end{DoxyCompactList}\item 
+void {\bfseries select\+Employee} ()
+\begin{DoxyCompactList}\small\item\em select and show table employee\textquotesingle{}s message. \end{DoxyCompactList}\item 
+void {\bfseries select\+Salary\+Record} ()
+\begin{DoxyCompactList}\small\item\em select and show table salary\+\_\+record\textquotesingle{}s message. \end{DoxyCompactList}\item 
+{\bfseries Data\+Base\+Tools} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} {\bfseries operator=} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} free handles. \end{DoxyCompactList}\item 
+void {\bfseries update\+Actual\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function of this function is similar to a trigger that update Actual\+\_\+\+Sarlary. \end{DoxyCompactList}\item 
+void {\bfseries clear\+Error\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function can clear the actual\+\_\+salary that should not be exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{静态 Public 成员函数 继承自 \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a11a4ce797bdead31eca8d9d0c1e8c920}{connect\+Data\+Base}} ()
+\begin{DoxyCompactList}\small\item\em the function is connect My\+SQL Data\+Base and it\textquotesingle{}s a static function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ac537eeebe5525302426f337f6f7ef123}{use\+Data\+Base}} (const std\+::string \&db\+\_\+name)
+\begin{DoxyCompactList}\small\item\em choose database to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Regular\textquotesingle{}s delete permissions are limited. 
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{_login_8hpp}{Login.\+hpp}}\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{_login_8cpp}{Login.\+cpp}}\end{DoxyCompactItemize}

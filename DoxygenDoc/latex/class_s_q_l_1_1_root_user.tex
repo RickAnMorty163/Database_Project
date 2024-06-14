@@ -1,0 +1,95 @@
+\doxysection{SQL\+::Root\+User类 参考}
+\hypertarget{class_s_q_l_1_1_root_user}{}\label{class_s_q_l_1_1_root_user}\index{SQL::RootUser@{SQL::RootUser}}
+
+
+\doxylink{class_s_q_l_1_1_root_user}{Root\+User} has the permissions of delete records  
+
+
+
+
+{\ttfamily \#include $<$Login.\+hpp$>$}
+
+类 SQL\+::Root\+User 继承关系图\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_l_1_1_root_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public 成员函数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a2f2092aece1654b4a5c7c4df2b261dd2}\label{class_s_q_l_1_1_root_user_a2f2092aece1654b4a5c7c4df2b261dd2} 
+void {\bfseries delete\+Employee} ()
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a2911a4eaccf46dc6643140b024f2dd1d}\label{class_s_q_l_1_1_root_user_a2911a4eaccf46dc6643140b024f2dd1d} 
+void {\bfseries menu\+Option} ()
+\item 
+void \mbox{\hyperlink{class_s_q_l_1_1_root_user_afea69c95fcee45db68a6a2eaf1355e70}{insert\+Employee}} ()
+\begin{DoxyCompactList}\small\item\em a function that insert 11 datas in table Employee. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_ab9622fa9765c032afe2365e20a4111dd}\label{class_s_q_l_1_1_root_user_ab9622fa9765c032afe2365e20a4111dd} 
+void {\bfseries insert\+Salary\+Record} ()
+\begin{DoxyCompactList}\small\item\em a fuction that insert salary\+\_\+record. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_add93f47f9d098281512753fb1f44e79e}\label{class_s_q_l_1_1_root_user_add93f47f9d098281512753fb1f44e79e} 
+void {\bfseries select\+Count} ()
+\begin{DoxyCompactList}\small\item\em count for custom condition in all tables. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_abb718b0d25c4a67c9cb42f5c598d825f}\label{class_s_q_l_1_1_root_user_abb718b0d25c4a67c9cb42f5c598d825f} 
+void {\bfseries add\+User} ()
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_aed89ebe41aec6d8b98db401619ad2bce}\label{class_s_q_l_1_1_root_user_aed89ebe41aec6d8b98db401619ad2bce} 
+void {\bfseries delete\+User} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public 成员函数 继承自 \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} get resources. \end{DoxyCompactList}\item 
+void {\bfseries select\+Employee} ()
+\begin{DoxyCompactList}\small\item\em select and show table employee\textquotesingle{}s message. \end{DoxyCompactList}\item 
+void {\bfseries select\+Salary\+Record} ()
+\begin{DoxyCompactList}\small\item\em select and show table salary\+\_\+record\textquotesingle{}s message. \end{DoxyCompactList}\item 
+{\bfseries Data\+Base\+Tools} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} {\bfseries operator=} (\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&\&)=delete
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Data\+Base\+Tools} ()
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} free handles. \end{DoxyCompactList}\item 
+void {\bfseries update\+Actual\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function of this function is similar to a trigger that update Actual\+\_\+\+Sarlary. \end{DoxyCompactList}\item 
+void {\bfseries clear\+Error\+Salary} ()
+\begin{DoxyCompactList}\small\item\em The function can clear the actual\+\_\+salary that should not be exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{额外继承的成员函数}
+\doxysubsection*{静态 Public 成员函数 继承自 \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a11a4ce797bdead31eca8d9d0c1e8c920}{connect\+Data\+Base}} ()
+\begin{DoxyCompactList}\small\item\em the function is connect My\+SQL Data\+Base and it\textquotesingle{}s a static function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ac537eeebe5525302426f337f6f7ef123}{use\+Data\+Base}} (const std\+::string \&db\+\_\+name)
+\begin{DoxyCompactList}\small\item\em choose database to use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+\doxylink{class_s_q_l_1_1_root_user}{Root\+User} has the permissions of delete records 
+
+\doxysubsection{成员函数说明}
+\Hypertarget{class_s_q_l_1_1_root_user_afea69c95fcee45db68a6a2eaf1355e70}\label{class_s_q_l_1_1_root_user_afea69c95fcee45db68a6a2eaf1355e70} 
+\index{SQL::RootUser@{SQL::RootUser}!insertEmployee@{insertEmployee}}
+\index{insertEmployee@{insertEmployee}!SQL::RootUser@{SQL::RootUser}}
+\doxysubsubsection{\texorpdfstring{insertEmployee()}{insertEmployee()}}
+{\footnotesize\ttfamily void SQL\+::\+Root\+User\+::insert\+Employee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+a function that insert 11 datas in table Employee. 
+
+Lambda Function to choose right department. \begin{DoxyReturn}{返回}
+boolean flag
+\end{DoxyReturn}
+Lambda Function to choose right department. \begin{DoxyReturn}{返回}
+boolean flag
+\end{DoxyReturn}
+
+
+该类的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{_login_8hpp}{Login.\+hpp}}\item 
+C\+:/\+Users/李想/\+Downloads/\+VStudio\+\_\+\+Obj/\+SQL\+\_\+\+GBK/\mbox{\hyperlink{_login_8cpp}{Login.\+cpp}}\end{DoxyCompactItemize}
