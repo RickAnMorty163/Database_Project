@@ -23,7 +23,7 @@
 &emsp;  实发工资(actual_salary),
 &emsp;  发放日期(pay_date)
 )
-<br>
+<br><br>
 *2.第三范式(3NF)优化*
 *R1 Employee*
 &emsp; emp_id (Prime Key)
