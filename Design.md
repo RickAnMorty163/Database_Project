@@ -38,7 +38,7 @@
 &emsp; unemp_insurance<br>
 &emsp; housing_fund<br>
 
-*R2 SalaryRecord*
+*R2 SalaryRecord*<br>
 &emsp; sal_id (Prime Key) -> auto increase id<br>
 &emsp; emp_id (Prime Key)<br>
 &emsp; actual_salary (rely to R1 attribute)<br>
