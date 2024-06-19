@@ -1,9 +1,9 @@
 /*****************************************************************//**
  * \file   Login.hpp
  * \brief
- *		   For two user classes, I fill sql_Tools.cpp API whth twice of them.
+ *		   For two user classes,  fill sql_Tools.cpp API whth twice of them.
  *		   Specially, RootUser need more permissions than RehularUser.
- *		   For class Login , I design a static function to check login status.
+ *		   For class Login ,  design a static function to check login status.
  *
  * \brief  Add new concept (Foreign Key) for table employee (department_tab, position_tab).
  *         Add two public function 'addUser' 'deleteUser' in class RootUser.
@@ -26,8 +26,8 @@ namespace SQL
 	public:
 		Login();
 		~Login();
-		Login operator=(Login&&) = delete;
-		Login(Login&&) = delete;
+		Login(Login const&) = delete;
+		Login operator=(Login const&) = delete;
 
 		/**
 		 * \brief the function .
