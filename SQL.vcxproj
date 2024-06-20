@@ -147,13 +147,13 @@
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Login.hpp" />
     <ClCompile Include="main.cc" />
-    <ClCompile Include="sql_Tools.cpp" />
+    <ClCompile Include="DataBaseTools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Design.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sql_Tools.hpp" />
+    <ClInclude Include="DataBaseTools.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

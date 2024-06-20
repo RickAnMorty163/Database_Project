@@ -18,7 +18,7 @@
     <ClCompile Include="main.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sql_Tools.cpp">
+    <ClCompile Include="DataBaseTools.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Login.hpp">
@@ -32,7 +32,7 @@
     <None Include="Design.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sql_Tools.hpp">
+    <ClInclude Include="DataBaseTools.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
