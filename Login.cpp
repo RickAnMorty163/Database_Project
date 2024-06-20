@@ -26,16 +26,10 @@ namespace SQL
 	extern SQLHDBC hdbc;// connect handle
 	extern SQLHSTMT hstmt;// sentence handles
 
-	Login::Login() {
-		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
+	Login::~Login() {
+		DataBaseTools::freeHandle();
 	}
 
-	Login::~Login() {
-		SQLFreeHandle(SQL_HANDLE_STMT, hstmt);
-		SQLDisconnect(hdbc);
-		SQLFreeHandle(SQL_HANDLE_DBC, hdbc);
-		SQLFreeHandle(SQL_HANDLE_ENV, henv);
-	}
 	int Login::checkLogin() {
 		if (!DataBaseTools::connectDataBase()) {
 			std::println("database init failed");

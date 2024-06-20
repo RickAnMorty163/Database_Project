@@ -49,8 +49,13 @@ namespace SQL
 		 */
 		void selectSalaryRecord();
 
-		DataBaseTools(DataBaseTools&&) = delete;
-		DataBaseTools operator=(DataBaseTools&&) = delete;
+		DataBaseTools(const DataBaseTools&) = delete;
+		DataBaseTools operator=(const DataBaseTools&) = delete;
+
+		/**
+		 *  freeHandle -> void
+		 */
+		static void freeHandle();
 
 		/**
 		 * \brief RAII -> free handles.

@@ -24,7 +24,7 @@ namespace SQL
 	 */
 	class Login {
 	public:
-		Login();
+		Login() = default;
 		~Login();
 		Login(Login const&) = delete;
 		Login operator=(Login const&) = delete;

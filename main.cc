@@ -14,9 +14,10 @@
 import <string>;
 import <print>;
 
+ /// windows poewrshell for GBK(936) coding
 static void SetEncode(int Encode = 936) {
-	SetConsoleCP(Encode);
-	SetConsoleOutputCP(Encode);
+	SetConsoleCP(Encode);// set input
+	SetConsoleOutputCP(Encode);// set output
 }
 
 int main(int argc, char* argv[]) {
@@ -41,6 +42,6 @@ int main(int argc, char* argv[]) {
 		break;
 	}
 	default:
-		std::println("Unknown Error");
+		std::println("Unknown Error,Please restart");
 	}
 }

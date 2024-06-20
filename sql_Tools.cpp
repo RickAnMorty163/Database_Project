@@ -21,20 +21,20 @@ import <regex>;
 
 namespace SQL
 {
-	SQLRETURN ret = NULL;// return message
-	SQLHENV henv = NULL;// environment handle
-	SQLHDBC hdbc = NULL;// connect handle
-	SQLHSTMT hstmt = NULL;// sentence handles
+	extern SQLRETURN ret = NULL;// return message
+	extern SQLHENV henv = NULL;// environment handle
+	extern SQLHDBC hdbc = NULL;// connect handle
+	extern SQLHSTMT hstmt = NULL;// sentence handles
 
 	DataBaseTools::DataBaseTools() {
-		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
+		connectDataBase();
 	}
 
 	bool DataBaseTools::connectDataBase() {
 		SQLAllocHandle(SQL_HANDLE_ENV, nullptr, &henv);// request environment
 		SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, SQL_IS_INTEGER);// set environment
 		SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);// request database connect
-		// param_2 point the DataBase data sources, ODBC8.0 upper can use wcahr string to append operator handle
+
 		ret = SQLConnect(hdbc, (SQLCHAR*)("mysql"), SQL_NTS, (SQLCHAR*)(""), SQL_NTS, (SQLCHAR*)(""), SQL_NTS);
 
 		return (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO) ? true : false;
@@ -135,11 +135,15 @@ namespace SQL
 			std::cerr << "select salary_record failed\n";
 	}
 
-	DataBaseTools::~DataBaseTools() {
+	void DataBaseTools::freeHandle() {
 		SQLFreeHandle(SQL_HANDLE_STMT, hstmt);
 		SQLDisconnect(hdbc);
 		SQLFreeHandle(SQL_HANDLE_DBC, hdbc);
 		SQLFreeHandle(SQL_HANDLE_ENV, henv);
+	}
+
+	DataBaseTools::~DataBaseTools() {
+		this->freeHandle();
 	}
 
 	void DataBaseTools::sqlExecute(const std::string& content) {
