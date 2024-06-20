@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "cdfilmrsu~数",
+  0: "bcdfiklmorsu~数🧐",
   1: "dlr",
-  2: "lms",
-  3: "cdisu~",
-  4: "fm"
+  2: "lm",
+  3: "cdfisu~",
+  4: "bfm数🧐"
 };
 
 var indexSectionNames =

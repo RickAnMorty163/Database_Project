@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['insertemployee_0',['insertEmployee',['../class_s_q_l_1_1_root_user.html#afea69c95fcee45db68a6a2eaf1355e70',1,'SQL::RootUser']]],
-  ['insertsalaryrecord_1',['insertSalaryRecord',['../class_s_q_l_1_1_root_user.html#ab9622fa9765c032afe2365e20a4111dd',1,'SQL::RootUser']]]
+  ['file_0',['MarkDown File',['../md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_design.html',1,'']]],
+  ['freehandle_1',['freeHandle',['../class_s_q_l_1_1_data_base_tools.html#af747d57c4c4450e20076226d6ab07b1c',1,'SQL::DataBaseTools']]]
 ];

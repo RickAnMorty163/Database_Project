@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7edatabasetools_0',['~DataBaseTools',['../class_s_q_l_1_1_data_base_tools.html#ad23be8f45212044d349a1601604e3f44',1,'SQL::DataBaseTools']]]
+  ['regularuser_0',['RegularUser',['../class_s_q_l_1_1_regular_user.html',1,'SQL']]],
+  ['rootuser_1',['RootUser',['../class_s_q_l_1_1_root_user.html',1,'SQL']]]
 ];

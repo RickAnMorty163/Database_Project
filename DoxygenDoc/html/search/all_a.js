@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['数据库关系模式设计_0',['数据库关系模式设计',['../md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_design.html#autotoc_md1',1,'']]]
+  ['selectcount_0',['selectCount',['../class_s_q_l_1_1_root_user.html#add93f47f9d098281512753fb1f44e79e',1,'SQL::RootUser']]],
+  ['selectemployee_1',['selectEmployee',['../class_s_q_l_1_1_data_base_tools.html#ab9e828699b775581e5687551491f5210',1,'SQL::DataBaseTools']]],
+  ['selectsalaryrecord_2',['selectSalaryRecord',['../class_s_q_l_1_1_data_base_tools.html#a6348fba624e58194328ad9955e6bbca7',1,'SQL::DataBaseTools']]]
 ];

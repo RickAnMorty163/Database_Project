@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['updateactualsalary_0',['updateActualSalary',['../class_s_q_l_1_1_data_base_tools.html#aadf76bf6c4fa0ad675ce5d832434bd97',1,'SQL::DataBaseTools']]],
-  ['usedatabase_1',['useDataBase',['../class_s_q_l_1_1_data_base_tools.html#ac537eeebe5525302426f337f6f7ef123',1,'SQL::DataBaseTools']]]
+  ['selectcount_0',['selectCount',['../class_s_q_l_1_1_root_user.html#add93f47f9d098281512753fb1f44e79e',1,'SQL::RootUser']]],
+  ['selectemployee_1',['selectEmployee',['../class_s_q_l_1_1_data_base_tools.html#ab9e828699b775581e5687551491f5210',1,'SQL::DataBaseTools']]],
+  ['selectsalaryrecord_2',['selectSalaryRecord',['../class_s_q_l_1_1_data_base_tools.html#a6348fba624e58194328ad9955e6bbca7',1,'SQL::DataBaseTools']]]
 ];

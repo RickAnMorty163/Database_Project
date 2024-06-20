@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['selectcount_0',['selectCount',['../class_s_q_l_1_1_root_user.html#add93f47f9d098281512753fb1f44e79e',1,'SQL::RootUser']]],
-  ['selectemployee_1',['selectEmployee',['../class_s_q_l_1_1_data_base_tools.html#ab9e828699b775581e5687551491f5210',1,'SQL::DataBaseTools']]],
-  ['selectsalaryrecord_2',['selectSalaryRecord',['../class_s_q_l_1_1_data_base_tools.html#a6348fba624e58194328ad9955e6bbca7',1,'SQL::DataBaseTools']]],
-  ['sql_5ftools_2ecpp_3',['sql_Tools.cpp',['../sql___tools_8cpp.html',1,'']]],
-  ['sql_5ftools_2ehpp_4',['sql_Tools.hpp',['../sql___tools_8hpp.html',1,'']]]
+  ['main_2ecc_0',['main.cc',['../main_8cc.html',1,'']]],
+  ['markdown_20file_1',['MarkDown File',['../md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_design.html',1,'']]],
+  ['mysql_20boost_3a_3aregex_2',['&lt;b&gt;Keyword: C++, ODBC, MySQL, Boost::regex',['../md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e.html#autotoc_md3',1,'']]]
 ];

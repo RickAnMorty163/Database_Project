@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['updateactualsalary_0',['updateActualSalary',['../class_s_q_l_1_1_data_base_tools.html#aadf76bf6c4fa0ad675ce5d832434bd97',1,'SQL::DataBaseTools']]],
-  ['usedatabase_1',['useDataBase',['../class_s_q_l_1_1_data_base_tools.html#ac537eeebe5525302426f337f6f7ef123',1,'SQL::DataBaseTools']]]
+  ['odbc_20mysql_20boost_3a_3aregex_0',['&lt;b&gt;Keyword: C++, ODBC, MySQL, Boost::regex',['../md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e.html#autotoc_md3',1,'']]]
 ];
