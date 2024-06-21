@@ -24,7 +24,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="108717753_p0.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">SQL_Project<span id="projectnumber">&#160;1.2</span>
+   <div id="projectname">SQL_Project<span id="projectnumber">&#160;1.3</span>
    </div>
    <div id="projectbrief">employee database</div>
   </td>
@@ -79,12 +79,27 @@ $(function() {
 <div class="textblock"><p><a class="anchor" id="autotoc_md2"></a></p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 <b>Keyword: C++, ODBC, MySQL, Boost::regex</b></h1>
-<p><b>cpp 对于std::getline() std::cin的utf-8 字符集的中文输入存在问题<br  />
+<p><b>cpp 对于 </p><div class="fragment"><div class="line"> C++</div>
+<div class="line">#include&lt;iostream&gt;</div>
+<div class="line"> </div>
+<div class="line">std::string str;</div>
+<div class="line">std::cin&gt;&gt;str; //input utf-8 chars</div>
+<div class="line">std::getline(std::cin,str);// input utf-8  chars end with Enter</div>
+</div><!-- fragment --><p> utf-8 字符集的原生中文输入存在问题<br  />
  即使使用对应的宽字符版本 std::wcin 也无济于事<br  />
- 虽然Win10有对于utf-8 的实验性支持，但依然无法解决cpp标准库输入流的问题<br  />
+ 虽然Win10有对于utf-8 的实验性支持，且 </p><div class="fragment"><div class="line"> C++</div>
+<div class="line">#include&lt;Windows.h&gt;</div>
+<div class="line"> </div>
+<div class="line">SetConsoleCP(65001);//设置控制台输入为utf-8编码</div>
+<div class="line">SetConsole(65001);//设置控制台输出为utf-8编码</div>
+</div><!-- fragment --><p> 但依然无法解决cpp标准库输入流的问题<br  />
  故本项目中的所有字符编码(包括ODBC数据源，MySQL数据库记录，cpp文件)均为gbk(936)编码标准 😢😢😢<br  />
- 微软现在也没在windows上整明白unicode,使用原生的std::cin读入utf-8字符非常麻烦<br  />
- 这是一个很有意思的改进方案，通过魔改std::cin 实现: <a href="https://chariri.moe/archives/408/windows-cin-read-utf8/">https://chariri.moe/archives/408/windows-cin-read-utf8/</a> 🥳🥳🥳 </b></p>
+ <br  />
+</b></p>
+<p><b>update:🥳<br  />
+ 在github找到一个很有意思的改进方案，通过魔改std::cin 实现:<br  />
+ blog: <a href="https://chariri.moe/archives/408/windows-cin-read-utf8/">https://chariri.moe/archives/408/windows-cin-read-utf8/</a> 🥳🥳🥳<br  />
+ source : <a href="https://github.com/cqjjjzr/utf8-console/blob/main/src/utf8_cin_windows.cpp">https://github.com/cqjjjzr/utf8-console/blob/main/src/utf8_cin_windows.cpp</a> 🧐🧐🧐 </b></p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

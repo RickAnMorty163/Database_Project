@@ -3,6 +3,7 @@
  * \brief  Complier by MSVC 14.3
  *		   Cpp Standerd 23 lastest preview
  * \brief  Add branches for two different authority users.
+ *		   Add exception catching for error handling.
  * \author Li Xiang
  * \date   June 4 2024
 
@@ -13,6 +14,7 @@
 
 import <string>;
 import <print>;
+import <exception>;
 
  /// windows poewrshell for GBK(936) coding
 static void SetEncode(int Encode = 936) {
@@ -30,18 +32,26 @@ int main(int argc, char* argv[]) {
 		login_flag = Login::checkLogin();
 	} while (!login_flag);
 
-	switch (login_flag) {
-	case 1: {
-		RootUser root;
-		root.menuOption();
-		break;
+	try {
+		switch (login_flag) {
+		case 1: {
+			RootUser root;
+			root.menuOption();
+			break;
+		}
+		case 2: {
+			RegularUser regular;
+			regular.menuOption();
+			break;
+		}
+		default:
+			throw std::runtime_error("OptionFlag Error");
+		}
 	}
-	case 2: {
-		RegularUser regular;
-		regular.menuOption();
-		break;
+	catch (std::exception& e) {
+		std::println("Excepection called : {}", e.what());
 	}
-	default:
-		std::println("Unknown Error,Please restart");
+	catch (...) {
+		std::println("Unknown exception");
 	}
 }
