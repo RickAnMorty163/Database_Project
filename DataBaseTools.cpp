@@ -21,6 +21,11 @@ import <regex>;
 
 namespace SQL
 {
+	extern SQLRETURN ret = NULL;// return message
+	extern SQLHENV henv = NULL;// environment handle
+	extern SQLHDBC hdbc = NULL;// connect handle
+	extern SQLHSTMT hstmt = NULL;// sentence handles
+
 	/**
 	 * \brief translate SQLCHAR* to std::string.
 	 *
@@ -39,11 +44,6 @@ namespace SQL
 		//use reinterpret_cast to convert SQLCHAR* to const char* and then to make a std::string object
 		return std::string(reinterpret_cast<const char*>(sqlCharPtr), length);
 	}
-
-	extern SQLRETURN ret = NULL;// return message
-	extern SQLHENV henv = NULL;// environment handle
-	extern SQLHDBC hdbc = NULL;// connect handle
-	extern SQLHSTMT hstmt = NULL;// sentence handles
 
 	DataBaseTools::DataBaseTools() {
 		connectDataBase();

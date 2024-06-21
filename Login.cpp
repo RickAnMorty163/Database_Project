@@ -14,12 +14,18 @@
 #include <sqlext.h>
 #include <sqltypes.h>
 
-import <print>;
-import <iostream>;
-import <iomanip>;
+#include <print>
+#include <iostream>
+#include <iomanip>
+#include <chrono>
 
 namespace SQL
 {
+	static void sleepAndClearTerminal() {
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
+		system("cls");
+	}
+
 	extern SQLRETURN ret;// return message
 	extern SQLHENV henv;// environment handle
 	extern SQLHDBC hdbc;// connect handle
@@ -136,6 +142,8 @@ namespace SQL
 					break;
 				else std::cerr << "Wrong option \n";
 			}
+
+			sleepAndClearTerminal();
 			std::println("");
 			int op = std::stoi(option);
 			switch (op) {
@@ -359,8 +367,10 @@ namespace SQL
 			if (boost::regex_search(password_org.begin(), password_org.end(), parttern)) {
 				std::println("\nPlease check your input again >> ");
 				std::getline(std::cin, password_check);
-				if (password_org == password_check)
+				if (password_org == password_check) {
+					system("cls");
 					break;
+				}
 				else {
 					std::println("Check your password setting again");
 					continue;
@@ -417,6 +427,8 @@ namespace SQL
 					break;
 				else std::cerr << "Wrong option \n";
 			}
+
+			sleepAndClearTerminal();
 			std::println("");
 			int op = std::stoi(option);
 			switch (op) {

@@ -3,9 +3,33 @@
 \label{md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e_autotoc_md2}%
 \Hypertarget{md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e_autotoc_md2}%
 \hypertarget{md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{{\bfseries{Keyword\+: C++, ODBC, My\+SQL, Boost\+::regex}}}{{\bfseries{Keyword\+: C++, ODBC, My\+SQL, Boost\+::regex}}}}\label{md__c_1_2_users_2_x_e6_x9_d_x8_e_x_e6_x83_x_b3_2_downloads_2_v_studio___obj_2_s_q_l___g_b_k_2_r_e_a_d_m_e_autotoc_md3}
-{\bfseries{cpp 对于std\+::getline() std\+::cin的utf-\/8 字符集的中文输入存在问题~\newline
+{\bfseries{cpp 对于 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C++}
+\DoxyCodeLine{\#include<iostream>}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::string\ str;}
+\DoxyCodeLine{std::cin>>str;\ //input\ utf-\/8\ chars}
+\DoxyCodeLine{std::getline(std::cin,str);//\ input\ utf-\/8\ \ chars\ end\ with\ Enter}
+
+\end{DoxyCode}
+ utf-\/8 字符集的原生中文输入存在问题~\newline
  即使使用对应的宽字符版本 std\+::wcin 也无济于事~\newline
- 虽然\+Win10有对于utf-\/8 的实验性支持，但依然无法解决cpp标准库输入流的问题~\newline
+ 虽然\+Win10有对于utf-\/8 的实验性支持，且 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C++}
+\DoxyCodeLine{\#include<Windows.h>}
+\DoxyCodeLine{}
+\DoxyCodeLine{SetConsoleCP(65001);//设置控制台输入为utf-\/8编码}
+\DoxyCodeLine{SetConsole(65001);//设置控制台输出为utf-\/8编码}
+
+\end{DoxyCode}
+ 但依然无法解决cpp标准库输入流的问题~\newline
  故本项目中的所有字符编码(包括\+ODBC数据源，\+My\+SQL数据库记录，cpp文件)均为gbk(936)编码标准 😢😢😢~\newline
- 微软现在也没在windows上整明白unicode,使用原生的std\+::cin读入utf-\/8字符非常麻烦~\newline
- 这是一个很有意思的改进方案，通过魔改std\+::cin 实现\+: \href{https://chariri.moe/archives/408/windows-cin-read-utf8/}{\texttt{ https\+://chariri.\+moe/archives/408/windows-\/cin-\/read-\/utf8/}} 🥳🥳🥳 }}
+ ~\newline
+}}
+
+{\bfseries{update\+:🥳~\newline
+ 在github找到一个很有意思的改进方案，通过魔改std\+::cin 实现\+:~\newline
+ blog\+: \href{https://chariri.moe/archives/408/windows-cin-read-utf8/}{\texttt{ https\+://chariri.\+moe/archives/408/windows-\/cin-\/read-\/utf8/}} 🥳🥳🥳~\newline
+ source \+: \href{https://github.com/cqjjjzr/utf8-console/blob/main/src/utf8_cin_windows.cpp}{\texttt{ https\+://github.\+com/cqjjjzr/utf8-\/console/blob/main/src/utf8\+\_\+cin\+\_\+windows.\+cpp}} 🧐🧐🧐 }}
