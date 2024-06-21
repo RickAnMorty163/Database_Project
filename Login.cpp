@@ -16,7 +16,6 @@
 
 import <print>;
 import <iostream>;
-import <regex>;
 import <iomanip>;
 
 namespace SQL

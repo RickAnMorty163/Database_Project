@@ -5,6 +5,7 @@
  *		   add new function	`clearErrorSalary` to check where actual_salary > 3000
  *		   add fetch to funtion `insertEmployee`
  *         move function `insertEmployee` `insertSalaryRecord` to file Login.cpp -> class RootUser
+ *		   change I/O functoin for `std::cout` to `std::println`
  * \author Li Xiang
  * \date   June 4 2024
 
@@ -15,12 +16,30 @@
 #include <sqlext.h>
 #include <sqltypes.h>
 import <iostream>;
-import <iomanip>;
 import <print>;
 import <regex>;
 
 namespace SQL
 {
+	/**
+	 * \brief translate SQLCHAR* to std::string.
+	 *
+	 * \param sqlCharPtr
+	 * \return
+	 */
+	static std::string SQLCharToStdString(const SQLCHAR* sqlCharPtr) {
+		if (sqlCharPtr == nullptr) {
+			return std::string();//if get null pointer, return empty string
+		}
+		//get length of string
+		size_t length = 0;
+		while (*(sqlCharPtr + length) != '\0') {
+			++length;
+		}
+		//use reinterpret_cast to convert SQLCHAR* to const char* and then to make a std::string object
+		return std::string(reinterpret_cast<const char*>(sqlCharPtr), length);
+	}
+
 	extern SQLRETURN ret = NULL;// return message
 	extern SQLHENV henv = NULL;// environment handle
 	extern SQLHDBC hdbc = NULL;// connect handle
@@ -81,19 +100,18 @@ namespace SQL
 				SQLGetData(hstmt, 9, SQL_C_CHAR, str9, 10, &in9);
 				SQLGetData(hstmt, 10, SQL_C_CHAR, str10, 10, &in10);
 				SQLGetData(hstmt, 11, SQL_C_CHAR, str11, 10, &in11);
-				std::cout
-					<< "emp_id:          |" << std::setw(11) << std::setiosflags(std::ios::left) << str1 << "|\n"
-					<< "name:            |" << std::setw(11) << std::setiosflags(std::ios::left) << str2 << "|\n"
-					<< "sex:             |" << std::setw(11) << std::setiosflags(std::ios::left) << str3 << "|\n"
-					<< "age:             |" << std::setw(11) << std::setiosflags(std::ios::left) << str4 << "|\n"
-					<< "position:        |" << std::setw(11) << std::setiosflags(std::ios::left) << str5 << "|\n"
-					<< "department:      |" << std::setw(11) << std::setiosflags(std::ios::left) << str6 << "|\n"
-					<< "basic_salary:    |" << std::setw(11) << std::setiosflags(std::ios::left) << str7 << "|\n"
-					<< "welfare_subsidy: |" << std::setw(11) << std::setiosflags(std::ios::left) << str8 << "|\n"
-					<< "reward_salary:   |" << std::setw(11) << std::setiosflags(std::ios::left) << str9 << "|\n"
-					<< "unemp_insurance: |" << std::setw(11) << std::setiosflags(std::ios::left) << str10 << "|\n"
-					<< "housing_fund:    |" << std::setw(11) << std::setiosflags(std::ios::left) << str11 << "|\n";
-				std::cout << "\n";
+				std::println("emp_id:          |{:<11}|", SQLCharToStdString(str1));
+				std::println("name:            |{:<11}|", SQLCharToStdString(str2));
+				std::println("gender:          |{:<11}|", SQLCharToStdString(str3));
+				std::println("birth_date:      |{:<11}|", SQLCharToStdString(str4));
+				std::println("hire_date:       |{:<11}|", SQLCharToStdString(str5));
+				std::println("basic_salary:    |{:<11}|", SQLCharToStdString(str6));
+				std::println("reward_salary:   |{:<11}|", SQLCharToStdString(str7));
+				std::println("welfare_subsidy: |{:<11}|", SQLCharToStdString(str8));
+				std::println("unemp_insurance: |{:<11}|", SQLCharToStdString(str9));
+				std::println("housing_fund:    |{:<11}|", SQLCharToStdString(str10));
+				std::println("phone_number:    |{:<11}|", SQLCharToStdString(str11));
+				std::println("");
 			}
 		}
 		else
@@ -123,12 +141,11 @@ namespace SQL
 				SQLGetData(hstmt, 2, SQL_C_CHAR, str2, 10, &in2);
 				SQLGetData(hstmt, 3, SQL_C_CHAR, str3, 10, &in3);
 				SQLGetData(hstmt, 4, SQL_C_CHAR, str4, 11, &in4);
-				std::cout
-					<< "sal_id:        |" << std::setw(5) << std::setiosflags(std::ios::left) << str1 << "|\n"
-					<< "emp_id:        |" << std::setw(5) << std::setiosflags(std::ios::left) << str2 << "|\n"
-					<< "actual_salary: |" << std::setw(5) << std::setiosflags(std::ios::left) << str3 << "|\n"
-					<< "pay_data:      |" << std::setw(5) << std::setiosflags(std::ios::left) << str4 << "|\n";
-				std::cout << "\n";
+				std::println("emp_id:          |{:<10}|", SQLCharToStdString(str1));
+				std::println("salary_date:     |{:<10}|", SQLCharToStdString(str2));
+				std::println("basic_salary:    |{:<10}|", SQLCharToStdString(str3));
+				std::println("reward_salary:   |{:<10}|", SQLCharToStdString(str4));
+				std::println("");
 			}
 		}
 		else
