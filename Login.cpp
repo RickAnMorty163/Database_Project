@@ -14,10 +14,9 @@
 #include <sqlext.h>
 #include <sqltypes.h>
 
-#include <print>
-#include <iostream>
-#include <iomanip>
-#include <chrono>
+import <print>;
+import <iostream>;
+import <chrono>;
 
 namespace SQL
 {
