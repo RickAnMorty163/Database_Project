@@ -24,30 +24,30 @@ namespace SQL
 		 * \brief RAII -> get resources.
 		 *
 		 */
-		DataBaseTools();
+		DataBaseTools()noexcept;
 
 		/**
 		 * \brief the function is connect MySQL DataBase and it's a static function.
 		 * \return boolean
 		 */
-		static bool connectDataBase();
+		static bool connectDataBase()noexcept;
 
 		/**
 		 * \brief choose database to use.
 		 *
 		 * \param db_name -> string
 		 */
-		static void useDataBase(const std::string& db_name);
+		static void useDataBase(const std::string& db_name)noexcept;
 
 		/**
 		 * \brief select and show table employee's message.
 		 */
-		void selectEmployee();
+		void selectEmployee()noexcept;
 
 		/**
 		 * \brief select and show table salary_record's message.
 		 */
-		void selectSalaryRecord();
+		void selectSalaryRecord()noexcept;
 
 		DataBaseTools(const DataBaseTools&) = delete;
 		DataBaseTools operator=(const DataBaseTools&) = delete;
@@ -55,28 +55,28 @@ namespace SQL
 		/**
 		 *  freeHandle -> void
 		 */
-		static void freeHandle();
+		static void freeHandle()noexcept;
 
 		/**
 		 * \brief RAII -> free handles.
 		 *
 		 */
-		~DataBaseTools();
+		~DataBaseTools()noexcept;
 		/**
 		 * \brief The function of this function is similar to a trigger that update Actual_Sarlary.
 		 *
 		 */
-		void updateActualSalary();
+		void updateActualSalary()noexcept;
 
 		/**
 		 * \brief The function can clear the actual_salary that should not be exist.
 		 *
 		 */
-		void clearErrorSalary();
+		void clearErrorSalary()noexcept;
 	private:
 		/**
 		 * \brief TODO SQL sentence.
 		 */
-		void sqlExecute(const std::string& content);
+		void sqlExecute(const std::string& content)noexcept;
 	};
 }

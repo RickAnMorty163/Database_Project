@@ -23,11 +23,10 @@ namespace SQL
 	 * \brief class Login offer a static function to choose user .
 	 */
 	class Login {
-	public:
+	private:
 		Login() = default;
-		~Login();
-		Login(Login const&) = delete;
-		Login operator=(Login const&) = delete;
+	public:
+		~Login() = default;
 
 		/**
 		 * \brief the function .
@@ -37,7 +36,7 @@ namespace SQL
 		 * \return 1 => Root User
 		 * \return 2 => Regular User
 		 */
-		static int checkLogin();
+		static int checkLogin()noexcept;
 	};
 
 	/**
@@ -45,29 +44,31 @@ namespace SQL
 	 */
 	class RootUser :public DataBaseTools {
 	public:
-		RootUser() :DataBaseTools() {}
-		void deleteEmployee();
-		void menuOption();
+		using DataBaseTools::DataBaseTools;
+
+		void deleteEmployee()noexcept;
+
+		void menuOption()noexcept;
 
 		/**
 		 * \brief a function that insert 11 datas in table Employee.
 		 */
-		void insertEmployee();
+		void insertEmployee()noexcept;
 
 		/**
 		 * \brief a fuction that insert salary_record.
 		 */
-		void insertSalaryRecord();
+		void insertSalaryRecord()noexcept;
 
 		/**
 		 * \brief count for custom condition in all tables.
 		 *
 		 */
-		void selectCount();
+		void selectCount()noexcept;
 
-		void addUser();
+		void addUser()noexcept;
 
-		void deleteUser();
+		void deleteUser()noexcept;
 	};
 
 	/**
@@ -75,7 +76,9 @@ namespace SQL
 	 */
 	class RegularUser :public DataBaseTools {
 	public:
+		using DataBaseTools::DataBaseTools;
+
 		RegularUser() :DataBaseTools() {}
-		void menuOption();
+		void menuOption()noexcept;
 	};
 }

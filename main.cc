@@ -9,21 +9,25 @@
 
  *********************************************************************/
 
-#include<Windows.h>
 #include "Login.hpp"
 
 import <string>;
 import <print>;
 import <exception>;
 
- /// windows poewrshell for GBK(936) coding
+#ifdef _WIN32
+#include<Windows.h>
+ // windows poewrshell for GBK(936) coding
 static void SetEncode(int Encode = 936) {
 	SetConsoleCP(Encode);// set input
 	SetConsoleOutputCP(Encode);// set output
 }
+#endif
 
 int main(int argc, char* argv[]) {
+#ifdef _WIN32
 	SetEncode();
+#endif
 
 	using namespace SQL;
 

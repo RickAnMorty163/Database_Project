@@ -32,7 +32,7 @@ namespace SQL
 	 * \param sqlCharPtr
 	 * \return
 	 */
-	static std::string SQLCharToStdString(const SQLCHAR* sqlCharPtr) {
+	static std::string SQLCharToStdString(const SQLCHAR* sqlCharPtr) noexcept {
 		if (sqlCharPtr == nullptr) {
 			return std::string();//if get null pointer, return empty string
 		}
@@ -45,11 +45,11 @@ namespace SQL
 		return std::string(reinterpret_cast<const char*>(sqlCharPtr), length);
 	}
 
-	DataBaseTools::DataBaseTools() {
+	DataBaseTools::DataBaseTools() noexcept {
 		connectDataBase();
 	}
 
-	bool DataBaseTools::connectDataBase() {
+	bool DataBaseTools::connectDataBase() noexcept {
 		SQLAllocHandle(SQL_HANDLE_ENV, nullptr, &henv);// request environment
 		SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, SQL_IS_INTEGER);// set environment
 		SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);// request database connect
@@ -59,7 +59,7 @@ namespace SQL
 		return (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO) ? true : false;
 	}
 
-	void DataBaseTools::useDataBase(const std::string& db_name) {
+	void DataBaseTools::useDataBase(const std::string& db_name) noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);// request handle
 		std::string content = "use " + db_name;// sql sentence to choose database
 		ret = SQLExecDirect(hstmt, (SQLCHAR*)(content.c_str()), SQL_NTS);// retire sql sentence
@@ -69,7 +69,7 @@ namespace SQL
 			std::cout << "falied\n";
 	}
 
-	void DataBaseTools::selectEmployee() {
+	void DataBaseTools::selectEmployee() noexcept {
 		updateActualSalary();
 
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
@@ -120,7 +120,7 @@ namespace SQL
 		updateActualSalary();
 	}
 
-	void DataBaseTools::selectSalaryRecord() {
+	void DataBaseTools::selectSalaryRecord() noexcept {
 		updateActualSalary();
 
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
@@ -152,18 +152,18 @@ namespace SQL
 			std::cerr << "select salary_record failed\n";
 	}
 
-	void DataBaseTools::freeHandle() {
+	void DataBaseTools::freeHandle() noexcept {
 		SQLFreeHandle(SQL_HANDLE_STMT, hstmt);
 		SQLDisconnect(hdbc);
 		SQLFreeHandle(SQL_HANDLE_DBC, hdbc);
 		SQLFreeHandle(SQL_HANDLE_ENV, henv);
 	}
 
-	DataBaseTools::~DataBaseTools() {
-		this->freeHandle();
+	DataBaseTools::~DataBaseTools() noexcept {
+		freeHandle();
 	}
 
-	void DataBaseTools::sqlExecute(const std::string& content) {
+	void DataBaseTools::sqlExecute(const std::string& content) noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 		ret = SQLExecDirect(hstmt, (SQLCHAR*)(content.c_str()), SQL_NTS);
 		if (ret == SQL_SUCCESS || ret == SQL_SUCCESS_WITH_INFO)
@@ -172,7 +172,7 @@ namespace SQL
 			std::cerr << "failed\n";
 	}
 
-	void DataBaseTools::updateActualSalary() {
+	void DataBaseTools::updateActualSalary() noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 
 		std::string content1 = "UPDATE salary_record ";
@@ -187,7 +187,7 @@ namespace SQL
 			std::println("Now database data is new ");
 	}
 
-	void DataBaseTools::clearErrorSalary() {
+	void DataBaseTools::clearErrorSalary() noexcept {
 		// use select sentence to check error actual_salary data.
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 		int rowCount = 0;

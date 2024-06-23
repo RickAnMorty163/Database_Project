@@ -20,21 +20,46 @@ import <chrono>;
 
 namespace SQL
 {
-	static void sleepAndClearTerminal() {
-		std::this_thread::sleep_for(std::chrono::milliseconds(500));
-		system("cls");
-	}
-
 	extern SQLRETURN ret;// return message
 	extern SQLHENV henv;// environment handle
 	extern SQLHDBC hdbc;// connect handle
 	extern SQLHSTMT hstmt;// sentence handles
 
-	Login::~Login() {
-		DataBaseTools::freeHandle();
+#ifdef _WIN32
+	static void clearTerminal() {
+		std::system("cls");
+	}
+#else
+	static void clearTerminal() {
+		std::system("clear");
+	}
+#endif
+
+	/**
+	 * \brief init input password that str_buffer capacity is 20.
+	 *
+	 * \return
+	 */
+	static std::string initInput() {
+		char password[20]{};
+		int i{};
+		while ((password[i] = _getch()) != 13) { // 13 -> E
+			if (password[i] == 8) { // 8->BackSpace
+				if (i > 0) {
+					i--;
+					std::cout << "\b \b"; // remove one char and back
+				}
+			}
+			else {
+				i++;
+				std::cout << '*';
+			}
+		}
+		password[i] = '\0';
+		return password;
 	}
 
-	int Login::checkLogin() {
+	int Login::checkLogin() noexcept {
 		if (!DataBaseTools::connectDataBase()) {
 			std::println("database init failed");
 			return 0;
@@ -51,31 +76,16 @@ namespace SQL
 		std::getline(std::cin, user_name);
 
 		// get user password
-		char password[20]{};// set string buffer = 20
-		int i{};
 		std::println("Please input >> password");
-		while ((password[i] = _getch()) != 13) { // 13 -> Enter
-			if (password[i] == 8) { // 8->BackSpace
-				if (i > 0) {
-					i--;
-					std::cout << "\b \b"; // remove one char and back
-				}
-			}
-			else {
-				i++;
-				std::cout << '*';
-			}
-		}
-		password[i] = '\0'; // add end flag
-		std::string password_org(password);// use C style string to construct wstirng object
+		std::string password = initInput();
 
 		std::string content1 = "select * from user where user_name= '";
 		std::string content2 = "' AND ";
 		std::string content3 = "password = ";
-		std::string content = content1 + user_name + content2 + content3 + password_org;
+		std::string content = content1 + user_name + content2 + content3 + password;
 
 		int rowCount = 0;
-		if (user_name.empty() || password_org.empty()) {
+		if (user_name.empty() || password.empty()) {
 			std::cerr << "\nlogin failed" << '\n' << '\n';
 			return 0;
 		}
@@ -100,7 +110,8 @@ namespace SQL
 			return 0;
 		}
 	}
-	void RootUser::deleteEmployee() {
+
+	void RootUser::deleteEmployee() noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 
 		std::string content = "delete from employee where emp_id = ";
@@ -119,7 +130,7 @@ namespace SQL
 			std::cerr << "delete id " << temp_str << " employee failed" << '\n';
 	}
 
-	void RootUser::menuOption() {
+	void RootUser::menuOption() noexcept {
 		boost::regex parttern(R"(^[0-8]$)");
 		std::string option{};
 		do {
@@ -142,7 +153,7 @@ namespace SQL
 				else std::cerr << "Wrong option \n";
 			}
 
-			sleepAndClearTerminal();
+			clearTerminal();
 			std::println("");
 			int op = std::stoi(option);
 			switch (op) {
@@ -179,7 +190,7 @@ namespace SQL
 		} while (option != "0");
 	}
 
-	void RootUser::insertEmployee() {
+	void RootUser::insertEmployee() noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 		std::string content;
 
@@ -248,7 +259,7 @@ namespace SQL
 			std::cerr << "failed\n";
 	}
 
-	void RootUser::insertSalaryRecord() {
+	void RootUser::insertSalaryRecord() noexcept {
 		updateActualSalary();
 		clearErrorSalary();
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
@@ -281,7 +292,7 @@ namespace SQL
 		updateActualSalary();
 	}
 
-	void RootUser::selectCount() {
+	void RootUser::selectCount() noexcept {
 		updateActualSalary();
 
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
@@ -323,7 +334,7 @@ namespace SQL
 		}
 	}
 
-	void RootUser::addUser() {
+	void RootUser::addUser() noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 
 		std::string content = "insert into user values ";
@@ -345,27 +356,12 @@ namespace SQL
 		std::string password_org, password_check;
 		while (true) {
 			// input password
-			char password[20]{};
-			int i{};
 			std::println("Please input >> password (Password can not include special characters)");
-			while ((password[i] = _getch()) != 13) { // 13 -> E
-				if (password[i] == 8) { // 8->BackSpace
-					if (i > 0) {
-						i--;
-						std::cout << "\b \b"; // remove one char and back
-					}
-				}
-				else {
-					i++;
-					std::cout << '*';
-				}
-			}
-			password[i] = '\0';
+			password_org = initInput();
 
-			password_org = password;
 			if (boost::regex_search(password_org.begin(), password_org.end(), parttern)) {
 				std::println("\nPlease check your input again >> ");
-				std::getline(std::cin, password_check);
+				password_check = initInput();
 				if (password_org == password_check) {
 					system("cls");
 					break;
@@ -388,7 +384,7 @@ namespace SQL
 			std::cerr << "Insert User " << user_name << " failed \n";
 	}
 
-	void RootUser::deleteUser() {
+	void RootUser::deleteUser() noexcept {
 		ret = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
 
 		std::string content = "delete from user where user_name = ";
@@ -410,7 +406,7 @@ namespace SQL
 			std::cerr << "delete user " << temp_str << " failed\n";
 	}
 
-	void RegularUser::menuOption() {
+	void RegularUser::menuOption() noexcept {
 		boost::regex parttern(R"(^[0-2]$)");
 		std::string option{};
 		do {
@@ -427,7 +423,7 @@ namespace SQL
 				else std::cerr << "Wrong option \n";
 			}
 
-			sleepAndClearTerminal();
+			clearTerminal();
 			std::println("");
 			int op = std::stoi(option);
 			switch (op) {
