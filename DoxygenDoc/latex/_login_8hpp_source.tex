@@ -10,37 +10,40 @@
 \DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }SQL}
 \DoxyCodeLine{00021\ \{}
 \DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}\ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_login}{\string~Login}}();}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}(\mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}\ operator=(\mbox{\hyperlink{class_s_q_l_1_1_login}{Login}}\ \textcolor{keyword}{const}\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_q_l_1_1_login_a23fe91e986c4e70892d409e2bc6e8f24}{checkLogin}}();}
-\DoxyCodeLine{00041\ \ \ \ \ \};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_root_user}{RootUser}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_root_user}{RootUser}}()\ :\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a1a3b81b1764d696bb535f63b2256851a}{DataBaseTools}}()\ \{\}}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteEmployee();}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ menuOption();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_afea69c95fcee45db68a6a2eaf1355e70}{insertEmployee}}();}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_ab9622fa9765c032afe2365e20a4111dd}{insertSalaryRecord}}();}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_add93f47f9d098281512753fb1f44e79e}{selectCount}}();}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addUser();}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteUser();}
-\DoxyCodeLine{00071\ \ \ \ \ \};}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_regular_user}{RegularUser}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_regular_user}{RegularUser}}()\ :\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a1a3b81b1764d696bb535f63b2256851a}{DataBaseTools}}()\ \{\}}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ menuOption();}
-\DoxyCodeLine{00080\ \ \ \ \ \};}
-\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_login}{\string~Login}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_q_l_1_1_login_a47081d35fa2087ef6dc3a24b4239dba1}{checkLogin}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00040\ \ \ \ \ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_root_user}{RootUser}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a6d9295efee988591027fcb0662628f67}{DataBaseTools::DataBaseTools}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteEmployee()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ menuOption()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_ab4384d7ba320e9e7c6c45019aa3d5180}{insertEmployee}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_abc520c9bd0472988fc244cb73cb605d8}{insertSalaryRecord}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_root_user_a3677d3301c281518f2e4f4bebcc820b9}{selectCount}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ addUser()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ deleteUser()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00072\ \ \ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_regular_user}{RegularUser}}\ :\textcolor{keyword}{public}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a6d9295efee988591027fcb0662628f67}{DataBaseTools::DataBaseTools}};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_regular_user}{RegularUser}}()\ :\mbox{\hyperlink{class_s_q_l_1_1_regular_user_a6d9295efee988591027fcb0662628f67}{DataBaseTools}}()\ \{\}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ menuOption()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00084\ \}}
 
 \end{DoxyCode}
