@@ -24,12 +24,17 @@ static void SetEncode(int Encode = 936) {
 }
 #endif
 
+/// custom exception
+struct LoginFlag_Error :std::exception {
+	const char* what() const noexcept override { return "Error Optional Flag"; }
+};
+
 int main(int argc, char* argv[]) {
+	using namespace SQL;
+
 #ifdef _WIN32
 	SetEncode();
 #endif
-
-	using namespace SQL;
 
 	int login_flag{};
 	do {
@@ -49,10 +54,10 @@ int main(int argc, char* argv[]) {
 			break;
 		}
 		default:
-			throw std::runtime_error("OptionFlag Error");
+			throw LoginFlag_Error();
 		}
 	}
-	catch (std::exception& e) {
+	catch (LoginFlag_Error& e) {
 		std::println("Excepection called : {}", e.what());
 	}
 	catch (...) {

@@ -1,0 +1,62 @@
+\chapter{Mark\+Down File}
+\hypertarget{md__design}{}\label{md__design}\index{MarkDown File@{MarkDown File}}
+\label{md__design_autotoc_md0}%
+\Hypertarget{md__design_autotoc_md0}%
+\hypertarget{md__design_autotoc_md1}{}\doxysubsection{\texorpdfstring{数据库关系模式设计}{数据库关系模式设计}}\label{md__design_autotoc_md1}
+{\bfseries{1.初始的关系模式 {\itshape R1 员工(\+Employee)}, ~\newline
+ ( ~\newline
+ \quad{} 员工编号(emp\+\_\+id), ~\newline
+ \quad{} 姓名(name), ~\newline
+ \quad{} 性别(sex), ~\newline
+ \quad{} 年龄(age), ~\newline
+ \quad{} 科室(department), ~\newline
+ \quad{} 职位(position)~\newline
+ ) ~\newline
+}}
+
+{\bfseries{{\itshape R2 工资(\+Salary)}~\newline
+ ( ~\newline
+ \quad{} 工资编号(salary\+\_\+id), ~\newline
+ \quad{} 员工编号(emp\+\_\+id), ~\newline
+ \quad{} 基本工资(basic\+\_\+salary), ~\newline
+ \quad{} 福利补贴(welfare\+\_\+salary), ~\newline
+ \quad{} 奖励工资(reward\+\_\+salary), ~\newline
+ \quad{} 扣除奖金(unemp\+\_\+insurance), ~\newline
+ \quad{} 实发工资(actual\+\_\+salary), ~\newline
+ \quad{} 发放日期(pay\+\_\+date)~\newline
+ ) ~\newline
+~\newline
+ {\itshape 2.第三范式(3\+NF)优化}~\newline
+ {\itshape R1 Employee}~\newline
+ \quad{} emp\+\_\+id (Prime Key)~\newline
+ \quad{} name~\newline
+ \quad{} sex~\newline
+ \quad{} age~\newline
+ \quad{} position (Foreign Key reference by R3 PK)~\newline
+ \quad{} department (Foreign Key reference by R4 PK)~\newline
+ \quad{} basic\+\_\+salary~\newline
+ \quad{} weflare\+\_\+subsidy~\newline
+ \quad{} reward\+\_\+salary~\newline
+ \quad{} unemp\+\_\+insurance~\newline
+ \quad{} housing\+\_\+fund~\newline
+}}
+
+{\bfseries{{\itshape R2 Salary\+Record}~\newline
+ \quad{} sal\+\_\+id (Prime Key) -\/\texorpdfstring{$>$}{>} auto increase id~\newline
+ \quad{} emp\+\_\+id (Prime Key)~\newline
+ \quad{} actual\+\_\+salary (rely to R1 attribute)~\newline
+ \quad{} pay\+\_\+date~\newline
+}}
+
+{\bfseries{{\itshape R3 Position\+\_\+\+Tab}~\newline
+ \quad{} pos\+\_\+name (Prime Key) -\/\texorpdfstring{$>$}{>} append concept to R1 (pos\+\_\+name)~\newline
+}}
+
+{\bfseries{{\itshape R4 Department\+\_\+\+Tab}~\newline
+ \quad{} dep\+\_\+name (Prime Key) -\/\texorpdfstring{$>$}{>} append concept to R1 (department)~\newline
+}}
+
+{\bfseries{{\itshape R5 User}~\newline
+ \quad{} user\+\_\+name (Prime Key)~\newline
+ \quad{} password~\newline
+ }}

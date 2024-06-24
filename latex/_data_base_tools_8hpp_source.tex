@@ -1,0 +1,38 @@
+\doxysection{Data\+Base\+Tools.\+hpp}
+\hypertarget{_data_base_tools_8hpp_source}{}\label{_data_base_tools_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*****************************************************************/}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ import<string>;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }SQL}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a6d9295efee988591027fcb0662628f67}{DataBaseTools}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ad2031181b4e4f38a53bb4fc46cd06ef3}{connectDataBase}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a24b2c805ebc85d1d395a174543a88706}{useDataBase}}(\textcolor{keyword}{const}\ std::string\&\ db\_name)\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ad0822ceee66550f8801cad4dbcc85cff}{selectEmployee}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a5f666fbb18f7289934c22c351ada64bc}{selectSalaryRecord}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a6d9295efee988591027fcb0662628f67}{DataBaseTools}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{DataBaseTools}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ae314dd6584d12691fecb92356d523c25}{freeHandle}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ad98ad63846d576e537424d05626d0dfe}{\string~DataBaseTools}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ab943c933235e418123ae5a6d82643ea3}{updateActualSalary}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a91e798f8964a9629eab1b18be9544745}{clearErrorSalary}}()\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sqlExecute(\textcolor{keyword}{const}\ std::string\&\ content)\textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00081\ \ \ \ \ \};}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

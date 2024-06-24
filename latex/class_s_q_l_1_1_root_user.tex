@@ -1,0 +1,103 @@
+\doxysection{SQL\+::Root\+User Class Reference}
+\hypertarget{class_s_q_l_1_1_root_user}{}\label{class_s_q_l_1_1_root_user}\index{SQL::RootUser@{SQL::RootUser}}
+
+
+\doxylink{class_s_q_l_1_1_root_user}{Root\+User} has the permissions of delete records.  
+
+
+
+
+{\ttfamily \#include $<$Login.\+hpp$>$}
+
+Inheritance diagram for SQL\+::Root\+User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_l_1_1_root_user}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a690e4c85607d78da8323ee63bf19c824}\label{class_s_q_l_1_1_root_user_a690e4c85607d78da8323ee63bf19c824} 
+void {\bfseries delete\+Employee} () noexcept
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a676262bb44fa460496e28f67a5b9e243}\label{class_s_q_l_1_1_root_user_a676262bb44fa460496e28f67a5b9e243} 
+void {\bfseries menu\+Option} () noexcept
+\item 
+void \mbox{\hyperlink{class_s_q_l_1_1_root_user_ab4384d7ba320e9e7c6c45019aa3d5180}{insert\+Employee}} () noexcept
+\begin{DoxyCompactList}\small\item\em a function that insert 11 datas in table Employee. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_abc520c9bd0472988fc244cb73cb605d8}\label{class_s_q_l_1_1_root_user_abc520c9bd0472988fc244cb73cb605d8} 
+void {\bfseries insert\+Salary\+Record} () noexcept
+\begin{DoxyCompactList}\small\item\em a fuction that insert salary\+\_\+record. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a3677d3301c281518f2e4f4bebcc820b9}\label{class_s_q_l_1_1_root_user_a3677d3301c281518f2e4f4bebcc820b9} 
+void {\bfseries select\+Count} () noexcept
+\begin{DoxyCompactList}\small\item\em count for custom condition in all tables. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a73d8d1fd4288f6b8bb51f0151cdfa797}\label{class_s_q_l_1_1_root_user_a73d8d1fd4288f6b8bb51f0151cdfa797} 
+void {\bfseries add\+User} () noexcept
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_abfec98fef34cf879147aa1752ec803e8}\label{class_s_q_l_1_1_root_user_abfec98fef34cf879147aa1752ec803e8} 
+void {\bfseries delete\+User} () noexcept
+\item 
+\Hypertarget{class_s_q_l_1_1_root_user_a6d9295efee988591027fcb0662628f67}\label{class_s_q_l_1_1_root_user_a6d9295efee988591027fcb0662628f67} 
+{\bfseries Data\+Base\+Tools} () noexcept
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} get resources. \end{DoxyCompactList}\item 
+\Hypertarget{class_s_q_l_1_1_root_user_acd1a023170e9f8d7abd65ad54c811927}\label{class_s_q_l_1_1_root_user_acd1a023170e9f8d7abd65ad54c811927} 
+{\bfseries Data\+Base\+Tools} (const \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Data\+Base\+Tools} () noexcept
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} get resources. \end{DoxyCompactList}\item 
+void {\bfseries select\+Employee} () noexcept
+\begin{DoxyCompactList}\small\item\em select and show table employee\textquotesingle{}s message. \end{DoxyCompactList}\item 
+void {\bfseries select\+Salary\+Record} () noexcept
+\begin{DoxyCompactList}\small\item\em select and show table salary\+\_\+record\textquotesingle{}s message. \end{DoxyCompactList}\item 
+{\bfseries Data\+Base\+Tools} (const \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&)=delete
+\item 
+\mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} {\bfseries operator=} (const \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{Data\+Base\+Tools}} \&)=delete
+\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Data\+Base\+Tools} () noexcept
+\begin{DoxyCompactList}\small\item\em RAII -\/\texorpdfstring{$>$}{>} free handles. \end{DoxyCompactList}\item 
+void {\bfseries update\+Actual\+Salary} () noexcept
+\begin{DoxyCompactList}\small\item\em The function of this function is similar to a trigger that update Actual\+\_\+\+Sarlary. \end{DoxyCompactList}\item 
+void {\bfseries clear\+Error\+Salary} () noexcept
+\begin{DoxyCompactList}\small\item\em The function can clear the actual\+\_\+salary that should not be exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools}{SQL\+::\+Data\+Base\+Tools}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ad2031181b4e4f38a53bb4fc46cd06ef3}{connect\+Data\+Base}} () noexcept
+\begin{DoxyCompactList}\small\item\em the function is connect My\+SQL Data\+Base and it\textquotesingle{}s a static function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_a24b2c805ebc85d1d395a174543a88706}{use\+Data\+Base}} (const std\+::string \&db\+\_\+name) noexcept
+\begin{DoxyCompactList}\small\item\em choose database to use. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_s_q_l_1_1_data_base_tools_ae314dd6584d12691fecb92356d523c25}{free\+Handle}} () noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_s_q_l_1_1_root_user}{Root\+User} has the permissions of delete records. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_q_l_1_1_root_user_ab4384d7ba320e9e7c6c45019aa3d5180}\label{class_s_q_l_1_1_root_user_ab4384d7ba320e9e7c6c45019aa3d5180} 
+\index{SQL::RootUser@{SQL::RootUser}!insertEmployee@{insertEmployee}}
+\index{insertEmployee@{insertEmployee}!SQL::RootUser@{SQL::RootUser}}
+\doxysubsubsection{\texorpdfstring{insertEmployee()}{insertEmployee()}}
+{\footnotesize\ttfamily void SQL\+::\+Root\+User\+::insert\+Employee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+a function that insert 11 datas in table Employee. 
+
+Lambda Function to choose right department. \begin{DoxyReturn}{Returns}
+boolean flag
+\end{DoxyReturn}
+Lambda Function to choose right department. \begin{DoxyReturn}{Returns}
+boolean flag
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_login_8hpp}{Login.\+hpp}}\item 
+\mbox{\hyperlink{_login_8cpp}{Login.\+cpp}}\end{DoxyCompactItemize}
