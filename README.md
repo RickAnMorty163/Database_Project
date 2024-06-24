@@ -1,5 +1,5 @@
 # <b>数据库练手项目<br> 🧐
-## <b>Keyword: C++, ODBC, MySQL, Boost::regex
+## <b>Keyword: C++, ODBC, MySQL, Boost, 跨平台
 
 <b>cpp 对于
 ``` C++
