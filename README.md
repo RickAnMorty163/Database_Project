@@ -1,7 +1,9 @@
 # <b>数据库练手项目<br> 🧐
 ## <b>Keyword: C++, ODBC, MySQL, Boost, 跨平台
+## Cpp Standerd: 23 last
+## Compiler By MSVC14.3 add `import` support
 
-<b>cpp 对于
+<b>cpp 对于utf-8 字符集的原生中文输入存在问题<br>
 ``` C++
 #include<iostream>
 
@@ -9,7 +11,6 @@ std::string str;
 std::cin>>str; //input utf-8 chars
 std::getline(std::cin,str);// input utf-8  chars end with Enter
 ```
-utf-8 字符集的原生中文输入存在问题<br>
 即使使用对应的宽字符版本 std::wcin 也无济于事<br>
 虽然Win10有对于utf-8 的实验性支持，且
 ``` C++
