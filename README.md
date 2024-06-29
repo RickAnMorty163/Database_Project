@@ -1,7 +1,7 @@
 # <b>数据库练手项目<br> 🧐
 ## <b>Keyword: C++, ODBC, MySQL, Boost, 跨平台
-## Cpp Standerd: 23 last
-## Compiler By MSVC14.3 add `import` support
+### Cpp Standerd: 23 last
+### Compiler By MSVC14.3 add `import` support
 
 <b>cpp 对于utf-8 字符集的原生中文输入存在问题<br>
 ``` C++
